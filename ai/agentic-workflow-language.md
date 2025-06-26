@@ -18,37 +18,63 @@ This language treats AI conversations as data that can be transformed through co
 
 Core insight: Every AI interaction produces data that can flow into other operations. By making these flows explicit and composable, we unlock entirely new ways of working with AI.
 
-## One to Many, Many to One: The Core Pattern
+## The Natural Flow of AI Workflows
 
-At its heart, this language is about transforming between single items and collections—a pattern that appears everywhere in both programming and mathematics.
+When working with AI, you rarely want just one answer. Real intellectual work involves exploring possibilities, comparing alternatives, and synthesizing insights. This language embraces that reality.
+
+### Branching and Merging
+
+Think about how you actually solve problems with AI:
+- You start with a question or idea
+- You explore multiple angles or approaches
+- You compare and evaluate the results
+- You synthesize the best insights into a conclusion
+
+This is a branching and merging pattern—and it's the core of this language:
+
+```
+"How should I approach this problem?"
+    | expand 5           // Branch: explore 5 different approaches
+    | evaluate-pros-cons // Process: analyze each approach
+    | compare-feasibility // Process: check practical constraints
+    / synthesize         // Merge: combine insights into recommendation
+```
 
 ### The Universal Pattern
 
-Think of it like this:
-- **Expand** (or scatter, spread, generate): Take one thing and create many variations
-- **Reduce** (or gather, collect, merge): Take many things and combine them into one
+This branching and merging appears everywhere:
+- **In your workflow**: Research branches into sources, then merges into conclusions
+- **In programming**: Operations that map over collections, then reduce to results
+- **In thinking**: Divergent exploration followed by convergent synthesis
 
-This same pattern appears in:
-- **Programming**: `map/reduce`, `flatMap/fold`, list comprehensions
-- **Mathematics**: Unfold/fold, generators/collectors, one-to-many/many-to-one functions
-- **Real work**: Brainstorming/deciding, exploring/concluding, researching/synthesizing
+We call these operations:
+- **Expand**: Take one conversation and branch into many (brainstorm, explore, generate)
+- **Reduce**: Take many results and merge into one (synthesize, decide, conclude)
 
-### It's All the Same Thing
+### The Same Operations, Different Containers
 
-Whether you call it arrays, streams, or parallel conversations, the concept is identical:
+The power of this language is that the same operations work whether you're dealing with arrays, streams, or parallel AI conversations. They're different containers, but they follow the same pattern:
 
 ```
-// These are equivalent concepts:
-"idea" → [idea₁, idea₂, idea₃, ...]  // Array of results
-"idea" → stream<ideas>                // Stream of results  
-"idea" → parallel conversations       // Multiple AI chats
+// Different containers, same operations:
+"idea" | expand 10      → [idea₁, idea₂, ...]     // Array of ideas
+"idea" | expand 10      → stream<ideas>           // Stream of ideas  
+"idea" | expand 10      → parallel AI chats       // Multiple conversations
 
-// And these operations are the same:
-expand 10        // Create 10 variations
-map operation    // Apply to each item in parallel
-filter criteria  // Keep only matching items
-/ reduce         // Combine back into one
+// The operations work on any container:
+container | filter "innovative"    // Works on arrays, streams, or chats
+container | map improve           // Transform each element
+container / pick-best             // Reduce to single result
 ```
+
+Think of it like this: whether you have a list of items, a stream of events, or multiple AI agents working in parallel, you can:
+- **Map**: Transform each element
+- **Filter**: Keep only what matches
+- **Reduce**: Combine into a single result
+
+The container changes, but the operations remain consistent. This is why you can write `expand 10 | evaluate / pick-best` and it works whether those are 10 items in memory or 10 AI agents running in parallel.
+
+This uniformity is powerful: you express what you want to do, not how to manage the underlying complexity. The language handles whether to spawn parallel processes, manage streams, or coordinate AI agents—you just describe the transformation you need.
 
 ### Practical Examples
 
