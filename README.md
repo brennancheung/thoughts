@@ -8,4 +8,4 @@ Here, you'll find musings on technology, software development practices, human-A
 
 ### 🤖 AI & Development
 - [Domain-Specific Intermediary Language (DSIL)](ai/domain_language_intro.md) - A proposal for bridging the communication gap between developers and AI tools through a structured, human-readable specification language
-- [A New UX Paradigm for Agentic AI Workflows](ai/new-ux-paradigm-agentic-ai.md) - An experimental interface for orchestrating AI agents beyond traditional chat paradigms
+- [A New UX Paradigm for Agentic AI Workflows](ai/workflow-lang/agentic-workflow-language.md) - An experimental interface for orchestrating AI agents beyond traditional chat paradigms
